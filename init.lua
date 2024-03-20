@@ -268,6 +268,8 @@ require('lazy').setup({
       local servers = {
         rust_analyzer = {},
         tsserver = {},
+        cssls = {},
+        emmet_language_server = {},
         angularls = {},
         lua_ls = {
           settings = {

@@ -51,7 +51,7 @@ return {
       keymaps = {
         ['g?'] = 'actions.show_help',
         ['<CR>'] = 'actions.select',
-        ['<C-s>'] = 'actions.select_vsplit',
+        ['<C-v>'] = 'actions.select_vsplit',
         ['<C-h>'] = 'actions.select_split',
         ['<C-t>'] = 'actions.select_tab',
         ['<C-p>'] = 'actions.preview',
@@ -70,7 +70,7 @@ return {
       use_default_keymaps = false,
       view_options = {
         -- Show files and directories that start with "."
-        show_hidden = false,
+        show_hidden = true,
         -- This function defines what is considered a "hidden" file
         is_hidden_file = function(name, bufnr)
           return vim.startswith(name, '.')

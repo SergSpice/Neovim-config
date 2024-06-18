@@ -125,12 +125,12 @@ require('lazy').setup({
       --  - Normal mode: ?
       --
       -- [[ Configure Telescope ]]
-      local trouble = require("trouble.providers.telescope")
+      local trouble = require("trouble.sources.telescope")
       require('telescope').setup {
         defaults = {
           mappings = {
-            i = { ["<c-t>"] = trouble.open_with_trouble },
-            n = { ["<c-t>"] = trouble.open_with_trouble },
+            i = { ["<c-t>"] = trouble.open },
+            n = { ["<c-t>"] = trouble.open },
           },
         },
         extensions = {
@@ -190,6 +190,7 @@ require('lazy').setup({
       'nvim-java/nvim-java-core',
       'nvim-java/nvim-java-test',
       'nvim-java/nvim-java-dap',
+      'nvim-java/nvim-java-refactor',
       'MunifTanjim/nui.nvim',
       'neovim/nvim-lspconfig',
       'mfussenegger/nvim-dap',
@@ -390,7 +391,6 @@ require('lazy').setup({
       ]]
     end,
   },
-
   {
     'echasnovski/mini.nvim',
     config = function()

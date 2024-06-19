@@ -187,10 +187,10 @@ require('lazy').setup({
     'nvim-java/nvim-java',
     dependencies = {
       'nvim-java/lua-async-await',
+      'nvim-java/nvim-java-refactor',
       'nvim-java/nvim-java-core',
       'nvim-java/nvim-java-test',
       'nvim-java/nvim-java-dap',
-      'nvim-java/nvim-java-refactor',
       'MunifTanjim/nui.nvim',
       'neovim/nvim-lspconfig',
       'mfussenegger/nvim-dap',
@@ -292,6 +292,9 @@ require('lazy').setup({
         cssls = {},
         emmet_language_server = {},
         angularls = {},
+        html = {},
+        jsonls = {},
+        tailwindcss = {},
         lua_ls = {
           settings = {
             Lua = {

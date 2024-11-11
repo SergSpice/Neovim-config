@@ -95,6 +95,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
   'tpope/vim-sleuth',
+  'tpope/vim-dotenv',
   { 'numToStr/Comment.nvim',    opts = {} },
   {
     'nvim-telescope/telescope.nvim',
@@ -266,7 +267,7 @@ require('lazy').setup({
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       local servers = {
         rust_analyzer = {},
-        tsserver = {},
+        ts_ls = {},
         cssls = {},
         emmet_language_server = {},
         angularls = {},
@@ -323,6 +324,12 @@ require('lazy').setup({
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      cmp.setup.filetype({ 'sql' }, {
+        sources = {
+          { name = 'vim-dadbod-completion' },
+          { name = 'buffer' },
+        }
+      })
       cmp.setup {
         snippet = {
           expand = function(args)

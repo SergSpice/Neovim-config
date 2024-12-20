@@ -189,7 +189,14 @@ return {
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
+        rust_analyzer = {},
+        ts_ls = {},
+        cssls = {},
+        emmet_language_server = {},
+        angularls = {},
+        html = {},
+        jsonls = {},
+        tailwindcss = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
